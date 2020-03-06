@@ -1,0 +1,37 @@
+<p>
+  example1 works!
+</p>
+<div class="row">
+  <div class="col-md-6">
+    <p><b>Tên</b>: {{ name }}</p>
+    <p><b>Email</b>: {{ email }}</p>
+    <p>Danh Sách Nhân Viên:</p>
+    <ul class="list-group" *ngFor="let user of users">
+      <li class="list-group-item">{{ user }}</li>
+    </ul>
+    <hr>
+    <h5>Property Binding</h5>
+    <p><b>Avatar</b>: <img [src]="image" alt=""></p>
+    <hr>
+    <h5>Event Binding</h5>
+    <button type="button" class="btn btn-secondary" (click)="clickme()">Click me</button>
+    <hr>
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Keyword 1 : {{ keyword }}</label>
+        <input (keyup)="showKeyword($event)" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Two-way Binding with ngModel : {{ keyword2 }}</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="keyword2" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
+
