@@ -3,20 +3,36 @@
 </p>
 <div class="row">
   <div class="col-md-6">
+    <h5>Template reference variables ( #var ) : {{ phone.value }}</h5>
+    <input #phone placeholder="phone number" value="19008098" class="form-control">
+    <hr>
+    <h5>Style binding && Class Binding</h5>
+    <div class="circle">1</div>
+    <div [class]="'circle'">2</div>
+    <div [class.circle]="!isCircle">3</div>
+    <hr>
+    <h5>Attribute Directive</h5>
+    <h6 [ngStyle]="styleCustom">ngStyle</h6>
+    <hr>
+    <label for="">ngClass</label>
+    <h6 [ngClass]="{circle:true}"></h6>
+    <hr>
+    <h5>Structural Directive ngIf vaf ngFor</h5>
+    <p *ngIf="true">ngIf - false</p>
+    <p *ngIf="isShow">check ngIf - {{ isShow }}</p>
+    <button (click)="isShow = !isShow">click me</button>
+    <hr>
+    <h5>ngFor</h5>
+    <ul class="list-group" *ngFor="let user of users">
+      <li class="list-group-item">{{ user.id + ':' + user.name }}</li>
+    </ul>
+    <h6>Thêm Thành Viên</h6>
     <form>
       <div class="form-group">
-        <label for="exampleInputEmail1">Keyword 1 : {{ keyword }}</label>
-        <input (keyup)="showKeyword($event)" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <label for="exampleInputPassword1">Họ & Tên</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]="txtName" [ngModelOptions]="{standalone: true}">
       </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Two-way Binding with ngModel : {{ keyword2 }}</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="keyword2" [ngModelOptions]="{standalone: true}">
-      </div>
-      <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button (click)="addUser()" type="submit" class="btn btn-primary">Thêm</button>
     </form>
   </div>
 </div>

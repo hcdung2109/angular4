@@ -1,0 +1,23 @@
+<p>
+  example3 works!
+</p>
+<div class="row">
+  <div class="col-md-6">
+    <h5>Input</h5>
+    <p>Input 1 :  {{ input_1 }} - Input 2 : {{ input_2 }}</p>
+    <h5>Output - Pass data from Component Child to Component Parent</h5>
+    <!--
+    + Import EvenEmitter
+    + Định nghĩa biến output để component cha nhận được
+    + Tạo một event giúp gửi - phát 1 sự kiện emit thông báo cho Component cha
+    -->
+    <form>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Họ & Tên : {{ txtName }} </label>
+        <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]="txtName" [ngModelOptions]="{standalone: true}">
+      </div>
+      <button (click)="btnSendDateToParent()" type="submit" class="btn btn-primary">Send</button>
+    </form>
+  </div>
+</div>
+

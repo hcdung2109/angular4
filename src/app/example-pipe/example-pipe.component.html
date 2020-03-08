@@ -1,0 +1,14 @@
+<p>
+  example-pipe works!
+</p>
+<h5>Pipe Date</h5>
+<p>Date: {{ currDate | date }}</p>
+<p>Date Custom Format: {{ currDate | date:'shortTime' }}</p>
+<p>Date Custom Format: {{ currDate | date:'yMd' }}</p>
+<h5>Upercase</h5>
+<p>Date Custom Format: {{ 'Vnpt' | uppercase }}</p>
+<h5>lowercase</h5>
+<p>Date Custom Format: {{ 'Vnpt' | lowercase }}</p>
+<h5>Pipe custom </h5>
+<!-- $ ng g pipe pipe_name -->
+<p>- pipe round number : {{ 9.999 | roundNumber}}</p>
