@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { Example1Component } from './example1/example1.component';
@@ -12,6 +13,10 @@ import { RoundNumberPipe } from './pipes/round-number.pipe';
 import { ExampleServiceComponent } from './example-service/example-service.component';
 import {HelpersService} from './services/helpers.service';
 import { ExampleRoutingComponent } from './example-routing/example-routing.component';
+import { HeaderComponent } from './header/header.component';
+import { ExampleLodashComponent } from './example-lodash/example-lodash.component';
+import { ExampleTemplateVariableComponent } from './example-template-variable/example-template-variable.component';
+import { ExampleLifecycleComponent } from './example-lifecycle/example-lifecycle.component';
 
 const appRoutes: Routes = [
   {
@@ -33,6 +38,18 @@ const appRoutes: Routes = [
   {
     path: 'example-service',
     component: ExampleServiceComponent
+  },
+  {
+    path: 'example-lodash',
+    component: ExampleLodashComponent
+  },
+  {
+    path: 'example-templ-variable',
+    component: ExampleTemplateVariableComponent
+  },
+  {
+    path: 'example-lifecycle',
+    component: ExampleLifecycleComponent
   }
 ];
 
@@ -45,11 +62,16 @@ const appRoutes: Routes = [
     ExamplePipeComponent,
     RoundNumberPipe,
     ExampleServiceComponent,
-    ExampleRoutingComponent
+    ExampleRoutingComponent,
+    HeaderComponent,
+    ExampleLodashComponent,
+    ExampleTemplateVariableComponent,
+    ExampleLifecycleComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 
 // https://v4.angular.io/api/core/Component
 @Component({
@@ -11,17 +11,21 @@ import { Component, OnInit } from '@angular/core';
     }`
   ]
 })
-export class Example1Component implements OnInit {
-  public name = `hoang dung`;
+export class Example1Component implements OnInit, OnChanges {
+  public name = `hcdung`;
   public email: string;
   public image: string;
   public users: string[] = ['Hoang Cong Dung' , 'Lam Viet Tung', 'Duong Thanh Tu'];
   private keyword: string;
-  private keyword2: string;
+  private keyword2 = 'abcd';
 
   constructor() {
     this.email = 'hcdung@vnpt.vn';
     this.image = 'https://v4.angular.io/assets/images/logos/angular/logo-nav@2x.png';
+  }
+
+  ngOnChanges(): void {
+    console.log('onchang');
   }
 
   ngOnInit() {

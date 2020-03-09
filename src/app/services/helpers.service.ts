@@ -4,6 +4,7 @@ import {Injectable, wtfCreateScope} from '@angular/core';
 export class HelpersService {
 
   constructor() { }
+
   sum(a, b) {
     const _a = Number(a);
     const _b = Number(b);
