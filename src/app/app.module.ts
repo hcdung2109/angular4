@@ -17,6 +17,7 @@ import { HeaderComponent } from './header/header.component';
 import { ExampleLodashComponent } from './example-lodash/example-lodash.component';
 import { ExampleTemplateVariableComponent } from './example-template-variable/example-template-variable.component';
 import { ExampleLifecycleComponent } from './example-lifecycle/example-lifecycle.component';
+import { ExampleLifecycleChildComponent } from './example-lifecycle-child/example-lifecycle-child.component';
 
 const appRoutes: Routes = [
   {
@@ -66,7 +67,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     ExampleLodashComponent,
     ExampleTemplateVariableComponent,
-    ExampleLifecycleComponent
+    ExampleLifecycleComponent,
+    ExampleLifecycleChildComponent
   ],
   imports: [
     BrowserModule,
@@ -74,9 +76,9 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [
+  providers: [ // khai bao cac service
     HelpersService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] // noi khao bao component chay dau tien
 })
 export class AppModule { }
