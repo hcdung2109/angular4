@@ -9,6 +9,7 @@ import {ExampleTemplateVariableComponent} from "./example-template-variable/exam
 import {ExampleLifecycleComponent} from "./example-lifecycle/example-lifecycle.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {NotfoundComponent} from "./notfound/notfound.component";
+import {ExampleQueryParamComponent} from "./example-query-param/example-query-param.component";
 
 export const appRoutes: Routes = [
   {
@@ -51,6 +52,10 @@ export const appRoutes: Routes = [
   {
     path: 'example-lifecycle',
     component: ExampleLifecycleComponent
+  },
+  {
+    path: 'example-query-param',
+    component: ExampleQueryParamComponent
   },
   {
     path: '**', // nếu ko tìm thấy

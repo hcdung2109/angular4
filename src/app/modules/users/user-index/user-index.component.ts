@@ -12,4 +12,7 @@ export class UserIndexComponent implements OnInit {
   ngOnInit() {
   }
 
+  relativeTo() {
+    
+  }
 }

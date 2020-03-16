@@ -21,6 +21,7 @@ import { ExampleLifecycleComponent } from './example-lifecycle/example-lifecycle
 import { ExampleLifecycleChildComponent } from './example-lifecycle-child/example-lifecycle-child.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ExampleQueryParamComponent } from './example-query-param/example-query-param.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ExampleLifecycleComponent,
     ExampleLifecycleChildComponent,
     NotfoundComponent,
-    DashboardComponent
+    DashboardComponent,
+    ExampleQueryParamComponent
   ],
   imports: [
     BrowserModule,

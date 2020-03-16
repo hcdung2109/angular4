@@ -1,3 +1,20 @@
 <p>
   user-index works!!
 </p>
+
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" [routerLink]="['/user/create']">Create User</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/user/edit']">User Edit</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  </li>
+</ul>
+<p>Cần phải thêm lại router-outlet để load nội dung của thằng con</p>
+<router-outlet></router-outlet>
